@@ -1,4 +1,4 @@
-#Self DTR for Slapjack
+# Self DTR for Slapjack
 
 ### Project
 Slapjack
