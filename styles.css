@@ -1,20 +1,48 @@
+* {
+  font-family: 'papyrus';
+}
+
 html {
   height: 100%;
+  background-color: aqua;
 }
 
 h1 {
   display: flex;
   justify-content: center;
+  margin: 45px;
 }
 
  body {
    min-height: 100%;
+   margin: 45px;
+   /* background-image: image(assets/scroll.jpg); */
 }
 
 main {
   min-height: 100%;
+}
+
+.cardView {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 45px;
+  margin: 65px;
+}
+
+img {
+  width: 8rem;
+}
+
+.shuffle-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.background {
+  height: 100%
+}
+
+.hidden {
+  display: none;
 }
