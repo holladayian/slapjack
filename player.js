@@ -16,8 +16,10 @@ class Player {
   }
 
   slap() {
-    this.hand.unshift(start.pile.length);
-    start.pile.shift(start.pile.length);
+    for (var i = 0; i < start.pile.length; i++) {
+      this.hand.unshift(start.pile[i]);
+  }
+  start.pile = [];
     //slap the fuckin cards
   }
 }
