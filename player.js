@@ -5,7 +5,7 @@ class Player {
     this.id = Date.now();
 
   }
-  saveWins() {
+  saveWinsToStorage() {
 
   }
   playCard() {
