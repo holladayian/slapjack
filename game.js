@@ -27,11 +27,20 @@ class Game {
       x = this.deck[i];
       this.deck[i] = this.deck[j];
       this.deck[j] = x;
-      deal();
+
+      // this.deal();
     }
+    console.log(this.deck);
+    this.deal();
   }
 
+  deal() {
 
+    playerB.hand = (this.deck.slice(26, 53));
+    playerA.hand = (this.deck.slice(0, 26));
+    console.log(playerA.hand)
+    // playerB.hand.push(this.deck[26-52]);
+    // playerA.hand.push(this.deck[0-25]);
 
     //deal the fuckin cards
   }
