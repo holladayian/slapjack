@@ -9,6 +9,7 @@ class Player {
 
   }
   playCard() {
-
+    start.pile.unshift(this.hand[0]);
+    this.hand.shift(this.hand[0]);
   }
 }

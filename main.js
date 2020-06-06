@@ -5,6 +5,8 @@ var playerA = new Player();
 var playerB = new Player();
 var start = new Game();
 
+var pile;
+
 // displayedCards.addEventListener('keydown', start.logKey);
 shuffleCard.addEventListener('click', start.shuffle);
 
