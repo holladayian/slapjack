@@ -38,6 +38,7 @@ class Game {
   }
 
   slap() {
+    
     //slap the fuckin cards
   }
 }
