@@ -2,6 +2,7 @@ class Player {
   constructor(wins, hand) {
     this.wins = wins;
     this.hand = hand;
+    this.turn = true;
     this.id = Date.now();
 
   }
@@ -10,9 +11,13 @@ class Player {
 
   }
 
+
+
   playCard() {
     start.pile.unshift(this.hand[0]);
     this.hand.shift(this.hand[0]);
+    this.turn = false;
+    // look into splice some more to refactor this
   }
 
   slap() {
@@ -20,6 +25,5 @@ class Player {
       this.hand.unshift(start.pile[i]);
   }
   start.pile = [];
-    //slap the fuckin cards
   }
 }
