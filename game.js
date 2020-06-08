@@ -1,12 +1,13 @@
 class Game {
   constructor() {
-    var cardNumber = ['01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 'jack', 'queen', 'king'];
-    var cardColor = ['blue', 'green', 'gold', 'red'];
+    this.catch;
     this.deck = [];
     this.pile = [];
-    for (var j = 0; j < cardColor.length; j++) {
-      for (var i = 0; i < cardNumber.length; i++) {
-        this.deck.push(`assets/${cardColor[j]}-${cardNumber[i]}.png`);
+    this.cardNumber = ['01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 'jack', 'queen', 'king'];
+    this.cardColor = ['blue', 'green', 'gold', 'red'];
+    for (var j = 0; j < this.cardColor.length; j++) {
+      for (var i = 0; i < this.cardNumber.length; i++) {
+        this.deck.push(`assets/${this.cardColor[j]}-${this.cardNumber[i]}.png`);
       }
     }
   }
@@ -51,5 +52,12 @@ class Game {
     playerA.hand = (this.deck.slice(0, 26));
     this.deck = [];
     //see if I can refactor this so i dont have to reset this.deck = []
+  }
+  checkSlap() {
+    if ((this.pile[0].includes('jack')) || ((this.pile[0].includes(this.cardNumber[i])) === ((this.pile[1].includes(this.cardNumber[i])) || (this.pile[2].includes(this.cardNumber[i]))))) {
+      this.catch = true;
+    } else {
+      this.catch = false;
+    }
   }
 }
