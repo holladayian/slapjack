@@ -21,9 +21,11 @@ class Player {
   }
 
   slap() {
+    //if start.pile[0] === start.pile[2] || start.pile[0] === start.pile[1] || start.pile[0] === jack
     for (var i = 0; i < start.pile.length; i++) {
       this.hand.unshift(start.pile[i]);
   }
   start.pile = [];
   }
+  //possibly use splice somehow to shorten this one up without having to reset start.pile = []
 }
