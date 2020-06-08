@@ -11,4 +11,6 @@ shuffleCard.addEventListener('click', start.shuffle);
 
 
 
+var pileCard = document.querySelector('.pile');
+
 //Make sure all ' ' or " "

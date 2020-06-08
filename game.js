@@ -6,28 +6,28 @@ class Game {
     this.pile = [];
     for (var j = 0; j < cardColor.length; j++) {
       for (var i = 0; i < cardNumber.length; i++) {
-        this.deck.push(`'assets/${cardColor[j]}-${cardNumber[i]}.png'`);
+        this.deck.push(`assets/${cardColor[j]}-${cardNumber[i]}.png`);
       }
     }
   }
 
   logKey(event) {
-    if (event.key === 'q' && playerA.turn === true) {
-      event.preventDefault();
+    event.preventDefault();
+    if (event.key === 'q' && playerA.turn !== false) {
       playerA.playCard();
-      playerB.turn = true
+      playerA.turn = false;
+      playerB.turn = true;
+
     }
     if (event.key === 'f') {
-      event.preventDefault();
       playerA.slap()
     }
-    if (event.key === 'p' && playerB.turn === true) {
-      event.preventDefault();
+    if (event.key === 'p' && playerB.turn !== false) {
       playerB.playCard();
+      playerB.turn = false;
       playerA.turn = true;
     }
     if (event.key === 'j') {
-      event.preventDefault();
       playerB.slap()
     }
   }
@@ -52,20 +52,4 @@ class Game {
     this.deck = [];
     //see if I can refactor this so i dont have to reset this.deck = []
   }
-
-  decideTurn() {
-    // if (playerA.turn === true) {
-    //   playerA.playCard();
-    //   playerB.turn = true
-    // } else {
-    //   playerB.playCard();
-    //   playerA.turn = true
-    // }
-    //I think i have to log keyKey first, and then set specific key to reassing specific value of turn
-  }
-
-  // slap() {
-  //
-  //   //slap the fuckin cards
-  // }
 }
