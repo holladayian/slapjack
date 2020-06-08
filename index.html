@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>SLAPJACK</title>
+  </head>
+  <body>
+    <header>
+      <h1>SLAPJACK</h1>
+    </header>
+    <main class="displayed-cards">
+<!-- maybe put img in a section -->
+      <img class="shuffle-card hidden" src="assets/back.png" alt="back of card">
+      <section class="cardView">
+
+        <section class="playerA">
+          <img src="assets/back.png" alt="back of card">
+          <p>Player A Holder</p>
+          <section class="aWins">
+          </section>
+        </section>
+        <section class="pile">
+          <img class="pile-card" src="assets/wild.png" alt="wild card">
+          <p>Pile Holder</p>
+        </section>
+        <section class = "playerB">
+          <img src="assets/back.png" alt="back of card">
+          <section class="bWins">
+            <p>Player B Holder</p>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="player.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
