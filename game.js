@@ -1,14 +1,9 @@
 class Game {
-  constructor() {
-    var cardNumber = ['01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 'jack', 'queen', 'king'];
-    var cardColor = ['blue', 'green', 'gold', 'red'];
-    this.deck = [];
+  constructor(cards) {
+    this.catch;
+    this.deck = cards;
     this.pile = [];
-    for (var j = 0; j < cardColor.length; j++) {
-      for (var i = 0; i < cardNumber.length; i++) {
-        this.deck.push(`assets/${cardColor[j]}-${cardNumber[i]}.png`);
-      }
-    }
+
   }
 
   logKey(event) {
@@ -17,7 +12,6 @@ class Game {
       playerA.playCard();
       playerA.turn = false;
       playerB.turn = true;
-
     }
     if (event.key === 'f') {
       playerA.slap()
