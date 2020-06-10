@@ -21,7 +21,7 @@ class Player {
     // pileCard.innerHTML = '';
     //make sure you refactor this part later to seperate the DOM and data model
     // pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="${start.pile[0]}">`);
-
+    showPile();
   }
 
   slap() {

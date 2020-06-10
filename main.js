@@ -24,4 +24,10 @@ shuffleCard.addEventListener('click', start.shuffle);
 
 var pileCard = document.querySelector('.pile');
 
+function showPile() {
+   pileCard.innerHTML = '';
+   pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="assets/${start.pile[0]["cardColor"]}-${start.pile[0]["cardNumber"]}.png">`);
+
+}
+
 //Make sure all ' ' or " "
