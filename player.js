@@ -14,14 +14,17 @@ class Player {
 
 
   playCard() {
-    start.pile.unshift(this.hand[0]);
-    this.hand.shift(this.hand[0]);
+    if (this.hand !== []) {
+      start.pile.unshift(this.hand[0]);
+      this.hand.shift(this.hand[0]);
+      showPile();
+    }
+    showHand();
     //run over this once more. Do i need line 18?
     // look into splice some more to refactor this
     // pileCard.innerHTML = '';
     //make sure you refactor this part later to seperate the DOM and data model
     // pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="${start.pile[0]}">`);
-    showPile();
   }
 
   slap() {

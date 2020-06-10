@@ -1,5 +1,6 @@
 var displayedCards = document.querySelector(".displayed-cards");
 var shuffleCard = document.querySelector(".shuffle-card");
+var pileCard = document.querySelector('.pile');
 
 
 var cardList = [];
@@ -22,12 +23,25 @@ shuffleCard.addEventListener('click', start.shuffle);
 
 
 
-var pileCard = document.querySelector('.pile');
 
 function showPile() {
    pileCard.innerHTML = '';
    pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="assets/${start.pile[0]["cardColor"]}-${start.pile[0]["cardNumber"]}.png">`);
+}
 
+function showHand() {
+  var playerACard = document.querySelector(".player-a");
+  var playerBCard = document.querySelector(".player-b")
+  if (playerA.hand === []) {
+    playerACard.classList.add("hidden")
+  } else {
+    playerACard.classList.remove("hidden")
+  }
+  if (playerB.hand === []) {
+    playerBCard.classList.add("hidden")
+  } else {
+    playerBCard.classList.remove("hidden")
+  }
 }
 
 //Make sure all ' ' or " "
