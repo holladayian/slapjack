@@ -46,11 +46,4 @@ class Game {
     this.deck = [];
     //see if I can refactor this so i dont have to reset this.deck = []
   }
-  checkSlap() {
-    if ((this.pile[0].includes('jack')) || ((this.pile[0].includes(this.cardNumber[i])) === ((this.pile[1].includes(this.cardNumber[i])) || (this.pile[2].includes(this.cardNumber[i]))))) {
-      this.catch = true;
-    } else {
-      this.catch = false;
-    }
-  }
 }

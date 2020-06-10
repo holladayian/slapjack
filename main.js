@@ -19,7 +19,7 @@ var start = new Game(cardList);
 
 
 window.addEventListener('keydown', start.logKey);
-shuffleCard.addEventListener('click', start.shuffle);
+window.addEventListener('click', start.shuffle(start.deck));
 
 
 
@@ -29,19 +29,21 @@ function showPile() {
    pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="assets/${start.pile[0]["cardColor"]}-${start.pile[0]["cardNumber"]}.png">`);
 }
 
-function showHand() {
-  var playerACard = document.querySelector(".player-a");
-  var playerBCard = document.querySelector(".player-b")
-  if (playerA.hand === []) {
-    playerACard.classList.add("hidden")
-  } else {
-    playerACard.classList.remove("hidden")
-  }
-  if (playerB.hand === []) {
-    playerBCard.classList.add("hidden")
-  } else {
-    playerBCard.classList.remove("hidden")
-  }
-}
+
+// incomplete
+// function showHand() {
+//   var playerACard = document.querySelector(".player-a");
+//   var playerBCard = document.querySelector(".player-b")
+//   if (playerA.hand === []) {
+//     playerACard.classList.add("hidden")
+//   } else {
+//     playerACard.classList.remove("hidden")
+//   }
+//   if (playerB.hand === []) {
+//     playerBCard.classList.add("hidden")
+//   } else {
+//     playerBCard.classList.remove("hidden")
+//   }
+// }
 
 //Make sure all ' ' or " "

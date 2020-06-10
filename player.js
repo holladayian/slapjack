@@ -19,20 +19,13 @@ class Player {
       this.hand.shift(this.hand[0]);
       showPile();
     }
-    showHand();
+    // showHand();
     //run over this once more. Do i need line 18?
     // look into splice some more to refactor this
-    // pileCard.innerHTML = '';
-    //make sure you refactor this part later to seperate the DOM and data model
-    // pileCard.insertAdjacentHTML('afterbegin', `<img class="pile-card" src="${start.pile[0]}">`);
   }
 
   slap() {
-    //if start.pile[0] === start.pile[2] || start.pile[0] === start.pile[1] || start.pile[0] === jack
-    // refactor the above pseudocode. I want to somehow get cardNumber[i] of start.pile[0], maybe start.pile[0].cardNumber[i]...?
-
     if ((start.pile[0]["cardNumber"] === "jack") || ((start.pile[0]["cardNumber"]) === (start.pile[1]["cardNumber"])) || ((start.pile[0]["cardNumber"]) === (start.pile[2]["cardNumber"]))) {
-    // || start.pile[0].cardNumber[i] === start.pile[1].cardNumber[i] || start.pile[0].cardNumber[i] === start.pile[2].cardNumber[i]) {
       for (var i = 0; i < start.pile.length; i++) {
         this.hand.unshift(start.pile[i]);
         //don't forget to reshuffle hand (will probably have to refactor game.shuffle()[maybe make it global] so it can take in the parameters of this.hand)
